@@ -1,0 +1,13 @@
+admin_password: password # set admin-password plaintext.  don't use "password"
+admin_username: admin # set admin-username plaintext
+aes_key: # set key 32 characters
+csrf_auth_key: #set key 32 characters
+db_path: ./data/securemessages.db #default db location
+host: 127.0.0.1
+is_production: false #
+log_level: info # set log level
+log_path: ./logs/app.log # set log path
+master_key:  #set 32 character master_key
+max_secure_message_length: 5000
+port: "9203"
+session_key: # set 32 character session_key

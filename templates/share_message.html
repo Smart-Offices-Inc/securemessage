@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <title>Share Secure Message</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" nonce="{{ .Nonce }}">
+    <link href="/assets/css/custom.css" rel="stylesheet" nonce="{{ .Nonce }}">
+</head>
+<body>
+    <div class="container mt-4" id="mainContent">
+        <!-- Logo -->
+        <div class="logo-container text-center mb-4">
+            <img src="/assets/images/shso_logo_white_bg.png" alt="SHSO Logo">
+        </div>
+
+        <!-- Page Title -->
+        <h1 class="text-center">Share Secure Message</h1>
+        <p class="text-center">Copy the link below to share your secure message:</p>
+
+        <!-- Share Link Input -->
+        <div class="input-group mb-3">
+            <input type="text" id="shareLink" value="{{ .Link }}" readonly class="form-control text-break mb-3" aria-label="Shareable link for the secure message">
+            <!-- Clipboard.js Integration -->
+            <button id="copyBtn" class="btn btn-primary clipboard-btn" data-clipboard-target="#shareLink" aria-label="Copy shareable link" type="button">Copy</button>
+        </div>
+
+        <!-- Expiration and Notes -->
+        <div class="mt-4 text-center">
+            <p><strong>Expires In:</strong> {{ .TimeoutRemaining }}</p>
+            {{ if .ViewOnce }}
+            <p><strong>Note:</strong> This message is set to view once and will be deleted after viewing.</p>
+            {{ end }}
+            {{ if .PasswordProtected }}
+            <p><strong>Note:</strong> This message is password protected.</p>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+
+    <script src="/assets/js/bootstrap.min.js" nonce="{{ .Nonce }}"></script>
+    <script src="/assets/js/custom.js" nonce="{{ .Nonce }}"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <title>Error</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" nonce="{{ .Nonce }}">
+    <link href="/assets/css/custom.css" rel="stylesheet" nonce="{{ .Nonce }}">
+</head>
+<body>
+<div class="container">
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="/assets/images/shso_logo_white_bg.png" alt="SHSO Logo" nonce="{{ .Nonce }}">
+    </div>
+
+    <!-- Toast container for displaying errors -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 2000;">
+        {{ if .ErrorMessage }}
+        <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    {{ .ErrorMessage }}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <!-- Go Back Button -->
+    <a href="/" class="btn btn-primary w-100 mt-3">Go Back</a>
+</div>
+<div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+<footer class="text-center mt-4">
+    <p>Created with ♥ by Humans and Robots<img src="/assets/images/ChatGPT-Logo.svg" alt="ChatGPT Logo" class="footer-logo"></p>
+</footer>
+
+<script src="/assets/js/bootstrap.min.js" nonce="{{ .Nonce }}"></script>
+<script src="/assets/js/custom.js" nonce="{{ .Nonce }}"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <title>Create Secure Message</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" nonce="{{ .Nonce }}">
+    <link href="/assets/css/custom.css" rel="stylesheet" nonce="{{ .Nonce }}">
+</head>
+<body>
+    <div class="container mt-4" id="mainContent">
+        <!-- Logo -->
+        <div class="logo-container text-center mb-4">
+            <img src="/assets/images/shso_logo_white_bg.png" alt="SHSO Logo">
+        </div>
+
+        <!-- Page Title -->
+        <h1 class="text-center">Create a Secure Message</h1>
+
+        <!-- Form -->
+        <form action="/create" method="POST" id="secureMessageForm">
+            <input type="hidden" name="_csrf" value="{{ .CSRFToken }}">
+            <div class="mb-3">
+                <label for="content" class="form-label">Message Content</label>
+                <textarea class="form-control" id="content" name="content" rows="5" maxlength="{{ .MaxMessageLength }}" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="expiration" class="form-label">Expiration Time</label>
+                <select class="form-select" id="expiration" name="expiration" aria-label="Select expiration time">
+                    <option value="5min">5 Minutes</option>
+                    <option value="30min">30 Minutes</option>
+                    <option value="1hour">1 Hour</option>
+                    <option value="1day">1 Day</option>
+                    <option value="7days">7 Days</option>
+                    <option value="forever">Never</option>
+                </select>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="enable_password" name="enable_password">
+                <label class="form-check-label" for="enable_password">Protect with Password</label>
+            </div>
+            <div class="mb-3 hidden" id="password-container">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" minlength="8" aria-describedby="passwordHelp">
+                <div id="passwordHelp" class="form-text">Password must be at least 8 characters.</div>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="view_once" name="view_once">
+                <label class="form-check-label" for="view_once">View Once</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Create Secure Message</button>
+        </form>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-4">
+        <p>Created with ♥ by Humans and Robots<img src="/assets/images/ChatGPT-Logo.svg" alt="ChatGPT Logo" class="footer-logo"></p>
+    </footer>
+
+    <!-- Clipboard.js Local -->
+    <script src="/assets/js/clipboard.min.js" nonce="{{ .Nonce }}"></script>
+
+    <script src="/assets/js/bootstrap.min.js" nonce="{{ .Nonce }}"></script>
+    <script src="/assets/js/custom.js" nonce="{{ .Nonce }}"></script>
+</body>
+</html>

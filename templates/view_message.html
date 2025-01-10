@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <title>Secure Message</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" nonce="{{ .Nonce }}">
+    <link href="/assets/css/custom.css" rel="stylesheet" nonce="{{ .Nonce }}">
+</head>
+<body>
+<div class="container mt-4">
+    <!-- Logo -->
+    <div class="logo-container text-center mb-4">
+        <img src="/assets/images/shso_logo_white_bg.png" alt="SHSO Logo">
+    </div>
+
+    <!-- Page Title -->
+    <h1 class="text-center">Secure Message</h1>
+
+    <!-- Secure Message Content -->
+    <div class="card w-100 mt-3">
+        <div class="card-body">
+            <p class="card-text text-break">{{ .Content }}</p>
+        </div>
+    </div>
+
+    <!-- Message Metadata -->
+    <div class="mt-4 text-center">
+        <p><strong>Expires In:</strong> {{ .TimeRemaining }}</p>
+        {{ if .ViewOnce }}
+        <p><strong>Note:</strong> This message was set to view once and is now deleted.</p>
+        {{ end }}
+        {{ if .PasswordProtected }}
+        <p><strong>Note:</strong> This message was password protected.</p>
+        {{ end }}
+    </div>
+</div>
+
+<!-- Toast Container -->
+<div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+<!-- Footer -->
+<footer class="text-center mt-4">
+    <p>Created with ♥ by Humans and Robots<img src="/assets/images/ChatGPT-Logo.svg" alt="ChatGPT Logo" class="footer-logo"></p>
+</footer>
+
+<script src="/assets/js/bootstrap.min.js" nonce="{{ .Nonce }}"></script>
+<script src="/assets/js/custom.js" nonce="{{ .Nonce }}"></script>
+</body>
+</html>
