@@ -2,8 +2,7 @@
 
 _A secure message sharing platform built with Go, Echo, GORM, AES encryption, ephemeral CSRF, and dynamic CSP!_ :sparkles:
 
-:globe-with-meridians: [https://sms.smartservices.tech](sms.smartservices.tech)
-
+https://sms.smartservices.tech
 ---
 
 ## Table of Contents  :file_folder:
