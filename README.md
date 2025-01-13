@@ -2,19 +2,26 @@
 
 _A secure message sharing platform built with Go, Echo, GORM, AES encryption, ephemeral CSRF, and dynamic CSP!_ :sparkles:
 
+:globe-with-meridians: [https://sms.smartservices.tech](sms.smartservices.tech)
+
 ---
 
 ## Table of Contents  :file_folder:
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Requirements](#requirements)
-4. [Installation](#installation)
-5. [Configuration](#configuration)
-6. [Usage](#usage)
-7. [Log Rotation & Crash Recovery](#log-rotation--crash-recovery)
-8. [Security Notes](#security-notes)
-9. [Contributing](#contributing)
-10. [License](#license)
+- [SecureMessages :lock: :rocket: :clipboard:](#securemessages-lock-rocket-clipboard)
+  - [Table of Contents  :file\_folder:](#table-of-contents--file_folder)
+  - [Introduction :wave:](#introduction-wave)
+  - [Features :star:](#features-star)
+  - [Requirements :gear:](#requirements-gear)
+  - [Installation :wrench:](#installation-wrench)
+    - [Clone the Repo](#clone-the-repo)
+    - [Build via Go](#build-via-go)
+    - [Or Docker](#or-docker)
+  - [Configuration :gear:](#configuration-gear)
+  - [Usage :computer:](#usage-computer)
+  - [Log Rotation \& Crash Recovery :arrows\_clockwise:](#log-rotation--crash-recovery-arrows_clockwise)
+  - [Security Notes :lock:](#security-notes-lock)
+  - [Contributing :handshake:](#contributing-handshake)
+  - [License :page\_facing\_up:](#license-page_facing_up)
 
 ---
 
@@ -60,7 +67,7 @@ _A secure message sharing platform built with Go, Echo, GORM, AES encryption, ep
 
 ### Clone the Repo
 ```bash
-git clone https://github.com/yourorg/SecureMessages.git
+git clone https://github.com/Smart-Offices-Inc/securemessages.git
 cd SecureMessages
 ```
 
@@ -152,6 +159,6 @@ Use Docker **restart policies** (e.g. `restart: unless-stopped`) so the containe
 
 ## License :page_facing_up:
 
-This project is released under the **MIT License**. See `LICENSE` file for details. :sparkling_heart:
+This project is released under the **GPL v3.0**. See `LICENSE` file for details. :sparkling_heart:
 
 **Happy Sharing!** :smiley:
