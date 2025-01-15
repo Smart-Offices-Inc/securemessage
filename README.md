@@ -2,16 +2,12 @@
 
 _A secure message sharing platform built with Go, Echo, GORM, AES encryption, ephemeral CSRF, and dynamic CSP!_ :sparkles:
 
-<<<<<<< HEAD
 https://sms.smartservices.tech
-=======
-[sms.smartservices.tech](https://sms.smartservices.tech)
-
->>>>>>> 30ac5b7 (Updated README.md)
 ---
 
 ## Table of Contents  :file_folder:
 - [SecureMessages :lock: :rocket: :clipboard:](#securemessages-lock-rocket-clipboard)
+  - [https://sms.smartservices.tech](#httpssmssmartservicestech)
   - [Table of Contents  :file\_folder:](#table-of-contents--file_folder)
   - [Introduction :wave:](#introduction-wave)
   - [Features :star:](#features-star)
