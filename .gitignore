@@ -1,0 +1,68 @@
+.gitignore
+.git
+.git.old
+go.sum
+go.mod
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Air config
+.air.toml
+
+# Air build
+/bin/
+/out/
+
+# Dependency directories (remove the comment below if you use vendoring)
+vendor/
+
+# IDE directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database files
+*.db
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Template cache
+*.cache
+
+*.DS_Store
+docker/
+# Dockerfile
+docker-compose.yml
+
+combined_output.txt
+*.sh
+.dev-docs/*
+config/config.yml
+config/dev_config.yml
